@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display: flex (가로배치)</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/layout01.css">
+
+</head>
+
+<body>
+    <h1> display: flex (가로배치) <i class="xi-star"></i></h1>
+
+    <!-- 가로배치 기본 -->
+    <h2>case01 기본 가로배치</h2>
+    <div class="container case01">
+        <div class="itm">01</div>
+        <div class="itm">02</div>
+    </div>
+
+    <!-- 양끝으로 배치 -->
+    <h2>case02 양끝 배치</h2>
+    <div class="container case02">
+        <div class="itm">01</div>
+        <div class="itm">02</div>
+    </div>
+
+    <!-- 양끝으로 배치 2 -->
+    <h2>case03 양끝 배치2</h2>
+    <div class="container case03">
+        <div class="itm">01</div>
+        <div class="itm right">02</div>
+        <div class="itm right2">03</div>
+    </div>
+
+    <!-- 실습 예시 -->
+    <h2>실습 예시 01</h2>
+
+    <!-- 헤더 위 작은 bar 만들기 -->
+    <div class="top_bar">
+        <div class="inner">
+            <div class="slogan">
+                대충 아무말 길게 길게. 나는 짱. 나는 최고.
+            </div>
+            <ul class="customer">
+                <li>QnA</li>
+                <li>NOTICE</li>
+                <li> <i class="xi-pause"></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 로고, 메뉴 만들기/
+무조건 이 순서로 해야됨. 헤더 안은 이너.
+        nav 메뉴, gnb 주메뉴 -->
+    <header id="header">
+        <div class="inner">
+            <h1>LOGO</h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="">menu01</a></li>
+                    <li><a href="">menu02</a></li>
+                    <li><a href="">menu03</a></li>
+                    <li><a href="right">menu04</a></li>
+                </ul>
+            </nav>
+            <div class="right">010-0000-0000</div>
+        </div>
+    </header>
+
+</body>
+
+</html>
