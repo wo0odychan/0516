@@ -1,0 +1,52 @@
+/* 팝업창 만들기 */
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: skyblue;
+    /* ↑ 팝업 공식 */
+    width: 300px;
+    z-index: 1;
+
+}
+
+.popup2 {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background: skyblue;
+    /* ↑ 팝업 공식 */
+    width: 300px;
+    z-index: 1;
+
+}
+
+.popup3 {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background: skyblue;
+    /* ↑ 팝업 공식 */
+    width: 300px;
+
+}
+
+img {
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+}
+
+/* 버튼창 만들기 */
+.btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+/* relative는 내가 기준을 부여하는 것으로,
+원래는 부모의 포지션이 기준임. */

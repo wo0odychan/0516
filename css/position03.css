@@ -1,0 +1,118 @@
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.top_banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: skyblue;
+
+    /* 떠잇는 애들 화면에 꽉 채울려면 좌, 우 0 */
+}
+
+.top_banner .inner {
+    height: 150px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.top_banner.on .inner {
+    height: 0;
+}
+
+
+.top_banner .btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-100%, 100%);
+    margin: 0 0 0 600px;
+    background: skyblue;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.top_banner .btn::after {
+    content: "올려!";
+}
+
+.top_banner.on .btn::after {
+    content: "내려!";
+}
+
+.top_banner.on .btn i {
+    transform: rotate(180deg);
+}
+
+/* 오른쪽 */
+.right_banner {
+    position: fixed;
+    top: 50%;
+    right: -300px;
+    width: 300px;
+    height: 400px;
+    background: paleturquoise;
+    transition: 0.5s;
+}
+
+.right_banner.on {
+    right: 0;
+}
+
+.right_banner .btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-100%, 0);
+
+}
+
+.right_banner.on .btn i {
+    transform: rotate(180deg);
+}
+
+.right_banner .btn i {
+    padding: 10px;
+    background: peachpuff;
+    color: #fff;
+    font-size: 20px;
+}
+
+/* 왼쪽 */
+.left_banner {
+    position: fixed;
+    top: 50%;
+    left: -300px;
+    width: 300px;
+    height: 400px;
+    background: turquoise;
+    transition: 0.5s;
+}
+
+.left_banner.on {
+    left: 0;
+}
+
+.left_banner .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(100%, 0);
+
+}
+
+.left_banner.on .btn i {
+    transform: rotate(180deg);
+}
+
+.left_banner .btn i {
+    padding: 10px;
+    background: sandybrown;
+    color: #fff;
+    font-size: 20px;
+}
