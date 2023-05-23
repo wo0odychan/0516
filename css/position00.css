@@ -1,0 +1,299 @@
+h1.tit {
+    margin: 50px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    margin: 50px 0 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.sec {
+    padding: 100px 0;
+    background: #f9f9f9;
+
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    background: yellow;
+
+}
+
+.itm {
+    background: tomato;
+    color: #fff;
+    text-align: center;
+}
+
+/* 외우센 */
+.case01 {
+    position: relative;
+
+}
+
+.case01 .itm {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    /* 위치 잡기, top, left 같은 태그.
+    줄줄이 쓸 필요 없이 걍 인셋만 하면 됨 */
+    transform: translate(-50%, -50%);
+}
+
+/*  */
+
+.case02 {
+    position: relative;
+}
+
+.case02 .itm {
+    position: absolute;
+    inset: 0 0 0 0;
+    /* 상 우 하 좌 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 디스플레이 플렉스 사용으로 요소를 가운데 오게 하는 방법 */
+}
+
+/* 왼쪽 라인 맞추기 */
+.case03 {
+    position: relative;
+}
+
+
+.case03 .itm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 0 0 -600px;
+    transform: translate(0, -50%);
+}
+
+/* 오른쪽 라인 맞추기 */
+.case04 {
+    position: relative;
+}
+
+.case04 .itm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 0 0 600px;
+    transform: translate(-100%, -50%);
+}
+
+/* 실습 예시 01 */
+.event {
+    background: rosybrown;
+}
+
+.event .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+}
+
+.event .con {
+    position: relative;
+    display: flex;
+    gap: 30px;
+
+}
+
+.event .con figure {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+.event .con figure .btn {
+    position: absolute;
+    bottom: -50px;
+    right: 30px;
+    transition: 0.5s;
+}
+
+.event .con figure .btn i {
+    background: #444;
+    color: #fff;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 50%;
+    /* 그냥 .btn에 가있으면 동그라미가 상하로 길어짐
+    i css로 따로 아이콘 조절을 해야함 */
+}
+
+.event .con figure:hover .btn {
+    bottom: 30px;
+
+}
+
+/* 실습 예시 02 이미지 위에 박스 커버하기*/
+
+.content {
+    background: #fff;
+
+}
+
+.content .con {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.content .con figure {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+.content figure .cover {
+    position: absolute;
+    inset: 0 auto auto 100%;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    /* 세로로 나열 */
+    /* background: rgb(0, 0, 255);
+    opacity: 0.5; */
+    background: rgba(141, 80, 90, 0.5);
+    /* 비치는 백그라운드.
+    오퍼시티와 rgba의 차이점) 오퍼시티는 안에 있는 글자까지 상속됨 */
+    color: #fff;
+    padding: 50px 30px;
+    transition: 0.8s;
+}
+
+.content .cover a {
+    background: #333;
+    padding: 5px 10px;
+    margin: auto 0 0 0;
+    align-self: flex-start;
+    /* 스트레치 된 버튼을 회복시킴 */
+}
+
+.content figure:hover .cover {
+    inset: 0 auto auto 0;
+
+}
+
+/* 리스트 만들기 */
+.customer .nav {
+    display: flex;
+    max-width: 1200px;
+    padding: 0 15px;
+    height: 100px;
+    margin: 0 auto 50px auto;
+}
+
+.customer .nav>li {
+    flex: 1;
+}
+
+.customer .nav>li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: rosybrown;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+.customer .nav>li:hover::after {
+    width: 100%;
+}
+
+.customer .nav>li a {
+    /* 요소를 가운데 오게하는 옛날 방식 */
+    display: block;
+    text-align: center;
+    line-height: 100px;
+}
+
+.customer .nav>li~li {
+    border-left: 1px solid rosybrown;
+}
+
+.customer .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.customer .list {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background: #fff;
+    padding: 0 30px;
+    margin: 0 0 10px 0;
+}
+
+/* 내용이 없음 안되니까 가상요소 만들거에요~ */
+.customer .list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 1px solid rosybrown;
+    border-left: 1px solid rosybrown;
+
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.customer .list:hover::before {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+}
+
+.customer .list::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* 탑, 레프트 하면 같은 곳에서 벌어지기 때문에
+    좌표를 바텀, 라이트로 함 */
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 1px solid rosybrown;
+    border-right: 1px solid rosybrown;
+
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.customer .list:hover::after {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+}
+
+/*  */
+
+.customer .list h3 {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+}
