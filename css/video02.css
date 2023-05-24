@@ -1,0 +1,55 @@
+.ctr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, calc(-50% + 100px));
+    margin: 0 0 0 -585px;
+
+}
+
+.ctr i {
+    padding: 10px;
+    font-size: 20px;
+    color: aliceblue;
+    background: burlywood;
+    margin: 0 5px 0 0;
+}
+
+#main_content {
+    padding: 100px 0;
+}
+
+#main_content .inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#bgm {
+    width: 100px;
+    height: 400px;
+    background: burlywood;
+}
+
+#bgm2 {
+    width: 100px;
+    height: 400px;
+    background: burlywood;
+}
+
+#bgm3 {
+    width: 100px;
+    height: 400px;
+    background: burlywood;
+}
+
+#bgm2 iframe {
+    left: -200px !important;
+}
+
+#bgm3 iframe {
+    left: -300px !important;
+}
